@@ -12,6 +12,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const fileList = require('./entry');
+const config = require('../config');
 
 const pjson = require('../package.json');
 
@@ -30,7 +31,8 @@ fileList.forEach(function (item) {
       inject: true,
       chunks: [item],
       template: paths.appHtml,
-      filename: item + '.html'
+      filename: item + '.html',
+      ...config.dev.HWPPageBaseConfig
     }));
 });
 

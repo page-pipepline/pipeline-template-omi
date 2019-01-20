@@ -15,6 +15,7 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const fileList = require('./entry');
 const pjson = require('../package.json');
+const config = require('../config');
 
 let entry = {};
 let htmlWebpackPlugins = [];
@@ -43,6 +44,7 @@ fileList.forEach(function (item) {
         minifyCSS: true,
         minifyURLs: true,
       },
+      ...config.dev.HWPPageBaseConfig
     }))
 });
 
