@@ -69,6 +69,7 @@
     "build": "PUBLIC_URL=. node scripts/build.js",
     "build-windows": "set PUBLIC_URL=.&& node scripts/build.js",
     "server": "rm -rf server/dist && rm -rf server/config && node scripts/build-server.js",
+    "template": "node scripts/server-template-archive.js",
     "render": "node server/node.js",
     "fix": "eslint src --fix"
   },
@@ -139,6 +140,7 @@
     "omi": "omio"
   },
   "devDependencies": {
+    "archiver": "^3.0.0",
     "less-loader": "^4.1.0"
   }
 }
