@@ -69,6 +69,7 @@
     "build": "PUBLIC_URL=. node scripts/build.js",
     "build-windows": "set PUBLIC_URL=.&& node scripts/build.js",
     "server": "rm -rf server/dist && rm -rf server/config && node scripts/build-server.js",
+    "render": "node server/node.js",
     "fix": "eslint src --fix"
   },
   "jest": {
