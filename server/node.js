@@ -32,10 +32,12 @@ let html = insertBaseConfigToHtml(template, baseConfig);
 
 switch (renderMode) {
   case 'release':
+    console.log(html)
     html = html.replace(/(<div\s*id="root"><\/div>)/, `${initdataScript}\n$1`);
+    console.log(html)
     break;
   case 'preview':
-    html = html.replace(/<!--react-ssr-outlet-->/, `${initdataScript}\n${previewInsertedScript}\n$1`);
+    html = html.replace(/(<div\s*id="root"><\/div>)/, `${initdataScript}\n${previewInsertedScript}\n$1`);
     break;
   default:
     break;
