@@ -1,3 +1,6 @@
+# pipeline-template-omi
+> 页面可视化搭建框架的页面模板 - 基于 [omi](https://github.com/Tencent/omi)
+
 ## Develop
 
 ```bash
